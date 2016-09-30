@@ -1,0 +1,17 @@
+App functionality
+-given a collection of things to vote on, app will put items against each other in pairs
+  -each round, people can vote for winner of that pair, so when only one item remaining, that is the winner
+
+Architecture
+-two apps: browser app (react) for UI, server for Node for voting logic
+  -communicate via web sockets
+
+Server App
+-designing redux app begins by thinking about application state data structure
+  -describes state of application at any time
+-in redux, application state stored in one single tree structure
+  -allows you to think about application state in isolation from aps behavior
+  -state is pure data, and its all in one place
+-initial state for our app might be just the collection of items that will be voted on (i.e. the collection entries)
+-once first vote has begun, should have way to distinguish what is being voted on
+  in this state, could have a vote entry in state holding pair of items currently under vote
